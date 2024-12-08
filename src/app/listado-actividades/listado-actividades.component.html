@@ -1,1 +1,24 @@
-<p>listado-actividades works!</p>
+<!--<table>
+    @for(cadaItem of datosServicio; track $index){
+        <app-actividad [fechaActividad]="cadaItem.Fecha" [lugarActividad]="cadaItem.Lugar" [monitorActividad]="cadaItem.Monitor" [tipoActividad]="cadaItem.Tipo"/>
+    }
+</table>-->
+
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr class="d-flex justify-content-between">
+          <th>Fecha</th>
+          <th>Lugar</th>
+          <th>Monitor</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cadaItem of datosServicio">
+          <app-actividad [fechaActividad]="cadaItem.Fecha" [lugarActividad]="cadaItem.Lugar" [monitorActividad]="cadaItem.Monitor" [tipoActividad]="cadaItem.Tipo"></app-actividad>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
